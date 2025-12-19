@@ -20,6 +20,7 @@ using Volo.Abp.UI.Navigation;
 namespace EasyAbp.Abp.LoginUi.Blazor.Host;
 
 [DependsOn(
+    typeof(AbpAutoMapperModule),
     typeof(AbpAutofacWebAssemblyModule),
     typeof(AbpAspNetCoreComponentsWebAssemblyBasicThemeModule),
     typeof(AbpAccountApplicationContractsModule),

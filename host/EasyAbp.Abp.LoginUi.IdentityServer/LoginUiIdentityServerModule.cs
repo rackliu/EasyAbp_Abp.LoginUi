@@ -243,8 +243,8 @@ public class LoginUiIdentityServerModule : AbpModule
 
         app.UseHttpsRedirection();
         app.UseCorrelationId();
-        app.MapAbpStaticAssets();
         app.UseRouting();
+        app.MapAbpStaticAssets();
         app.UseCors();
         app.UseAuthentication();
         app.UseJwtTokenMiddleware();

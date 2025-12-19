@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using IdentityModel;
+using Duende.IdentityModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -165,8 +165,8 @@ public class LoginUiHttpApiHostModule : AbpModule
 
         app.UseHttpsRedirection();
         app.UseCorrelationId();
-        app.MapAbpStaticAssets();
         app.UseRouting();
+        app.MapAbpStaticAssets();
         app.UseCors();
         app.UseAuthentication();
         if (MultiTenancyConsts.IsEnabled)

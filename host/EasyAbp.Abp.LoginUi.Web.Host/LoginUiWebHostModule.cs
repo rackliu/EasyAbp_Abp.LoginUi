@@ -209,8 +209,8 @@ public class LoginUiWebHostModule : AbpModule
         }
 
         app.UseHttpsRedirection();
-        app.MapAbpStaticAssets();
         app.UseRouting();
+        app.MapAbpStaticAssets();
         app.UseAuthentication();
 
         if (MultiTenancyConsts.IsEnabled)
