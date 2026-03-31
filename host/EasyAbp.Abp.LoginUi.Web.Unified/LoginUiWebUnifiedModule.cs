@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using EasyAbp.Abp.LoginUi.EntityFrameworkCore;
 using EasyAbp.Abp.LoginUi.MultiTenancy;
 using EasyAbp.Abp.LoginUi.Web;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.Swagger;
 using Volo.Abp;
 using Volo.Abp.Account;

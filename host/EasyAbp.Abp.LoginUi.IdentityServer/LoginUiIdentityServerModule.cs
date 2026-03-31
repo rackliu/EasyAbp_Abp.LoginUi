@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using EasyAbp.Abp.LoginUi.MultiTenancy;
 using EasyAbp.Abp.LoginUi.Web;
 using StackExchange.Redis;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;

@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using EasyAbp.Abp.LoginUi.EntityFrameworkCore;
 using EasyAbp.Abp.LoginUi.MultiTenancy;
 using StackExchange.Redis;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
