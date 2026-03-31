@@ -55,7 +55,8 @@ namespace EasyAbp.Abp.LoginUi;
     typeof(AbpTenantManagementHttpApiClientModule),
     typeof(AbpPermissionManagementHttpApiClientModule),
     typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpSwashbuckleModule)
+    typeof(AbpSwashbuckleModule),
+    typeof(AbpAutoMapperModule)
     )]
 public class LoginUiWebHostModule : AbpModule
 {
@@ -80,7 +81,7 @@ public class LoginUiWebHostModule : AbpModule
         ConfigureCache(configuration);
         ConfigureUrls(configuration);
         ConfigureAuthentication(context, configuration);
-        ConfigureAutoMapper();
+        ConfigureAutoMapper(context);
         ConfigureVirtualFileSystem(hostingEnvironment);
         ConfigureSwaggerServices(context.Services);
         ConfigureMultiTenancy();
@@ -149,8 +150,9 @@ public class LoginUiWebHostModule : AbpModule
             });
     }
 
-    private void ConfigureAutoMapper()
+    private void ConfigureAutoMapper(ServiceConfigurationContext context)
     {
+        context.Services.AddAutoMapperObjectMapper();
         Configure<AbpAutoMapperOptions>(options =>
         {
             options.AddMaps<LoginUiWebHostModule>();
